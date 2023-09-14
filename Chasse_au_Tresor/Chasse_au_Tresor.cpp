@@ -51,9 +51,11 @@ int ligne()
     std::cout << "colone 1-4" << std::endl;
     std::cin >> y;
 
-    std::cout << (y * w + x);
+    int result((y-1) * w + (x-1));
 
-    return EXIT_SUCCESS;
+    std::cout << result << std::endl;
+
+    return result;
 }
 
 int main()
