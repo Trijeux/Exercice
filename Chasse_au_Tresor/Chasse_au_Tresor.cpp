@@ -4,18 +4,18 @@
 #define HEIGHT 4
 
 int plateau[WIDTH * HEIGHT] = {
-        0, 0, 0, 0,
+		0, 0, 0, 0,
         0, 0, 0, 0,
         0, 0, 0, 0,
         0, 0, 0, 0,
 };
 
-int coffre[WIDTH * HEIGHT] = {
-        0, 0, 0, 0,
-        0, 0, 1, 0,
-        0, 0, 0, 0,
-        0, 0, 0, 0,
-};
+//int coffre[WIDTH * HEIGHT] = {
+//        0, 0, 0, 0,
+//        0, 0, 1, 0,
+//        0, 0, 0, 0,
+//        0, 0, 0, 0,
+//};
 
 void draw_game()
 {
@@ -38,27 +38,27 @@ void draw_game()
     }
 }
 
-void Recherche()
-{
-    for (int row = 0; row < HEIGHT; row++)
-    {
-        for (int column = 0; column < WIDTH; column++)
-        {
-            int case_state = coffre[row * WIDTH + column];
-
-            if (case_state == 0)
-            {
-                std::cout << '-';
-            }
-            else
-            {
-                std::cout << 'o';
-            }
-        }
-        std::cout << '\n';
-
-    }
-}
+//void Recherche()
+//{
+//    for (int row = 0; row < HEIGHT; row++)
+//    {
+//        for (int column = 0; column < WIDTH; column++)
+//        {
+//            int case_state = coffre[row * WIDTH + column];
+//
+//            if (case_state == 0)
+//            {
+//                std::cout << '-';
+//            }
+//            else
+//            {
+//                std::cout << 'o';
+//            }
+//        }
+//        std::cout << '\n';
+//
+//    }
+//}
 
 int ligne()
 {
@@ -74,9 +74,9 @@ int ligne()
     std::cout << "colone 1-4" << std::endl;
     std::cin >> y;
 
-    int result = (y-1) * WIDTH + (x-1);
+    int result = (x-1) * WIDTH + (y-1);
 
-    std::cout << result << std::endl;
+    plateau[result] = 1;
 
     return result;
 }
@@ -85,13 +85,16 @@ int main()
 {
     bool(treasurefound) = false;
 
-	do
-	{
+    do
+    {
 
-		draw_game();
+        draw_game();
         ligne();
 
-    } while (treasurefound == false);
+    }
+	while (treasurefound == false);
+
+    std::cout << "Tu as trouver le coffre" << std::endl;
 
     return EXIT_SUCCESS;
 }
