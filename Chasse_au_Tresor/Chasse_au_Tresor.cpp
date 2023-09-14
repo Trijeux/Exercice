@@ -3,11 +3,16 @@
 #define WIDTH 4
 #define HEIGHT 4
 
-char linge;
+int plateau[WIDTH * HEIGHT] = {
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+};
 
-int cases[WIDTH * HEIGHT] = {
+int coffre[WIDTH * HEIGHT] = {
         0, 0, 0, 0,
-        0, 0, 0, 0,
+        0, 0, 1, 0,
         0, 0, 0, 0,
         0, 0, 0, 0,
 };
@@ -18,7 +23,7 @@ void draw_game()
     {
         for (int column = 0; column < WIDTH; column++)
         {
-            int case_state = cases[row * WIDTH + column];
+            int case_state = plateau[row * WIDTH + column];
 
             if (case_state == 0)
             {
@@ -27,6 +32,27 @@ void draw_game()
             else
             {
                 std::cout << 'x';
+            }
+        }
+        std::cout << '\n';
+    }
+}
+
+void Recherche()
+{
+    for (int row = 0; row < HEIGHT; row++)
+    {
+        for (int column = 0; column < WIDTH; column++)
+        {
+            int case_state = coffre[row * WIDTH + column];
+
+            if (case_state == 0)
+            {
+                std::cout << '-';
+            }
+            else
+            {
+                std::cout << 'o';
             }
         }
         std::cout << '\n';
@@ -62,7 +88,7 @@ int main()
 	do
 	{
 
-        draw_game();
+		draw_game();
         ligne();
 
     } while (treasurefound == false);
