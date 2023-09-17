@@ -1,40 +1,40 @@
 #include "operation.h"
 #include <math.h>
 
-// addition
-float add(float a, float b)
+ //addition
+float add(float c, float d)
 {
-	return (a + b);
+	return (c + d);
 }
-float sub(float a, float b)
+float sub(float c, float d)
 {
-	return (a - b);
+	return (c - d);
 }
-float mult(float a, float b)
+float mult(float c, float d)
 {
-	return (a * b);
+	return (c * d);
 }
-float divi(float a, float b)
+float divi(float c, float d)
 {
-	return (a / b);
+	return (c / d);
 }
 float carre(float c)
 {
 	return (sqrtf(c));
 }
-int add(int c, int d)
+int add(int a, int b)
 {
-	return (c + d);
+	return (a + b);
 }
-int sub(int c, int d)
+int sub(int a, int b)
 {
-	return (c - d);
+	return (a - b);
 }
-int mult(int c, int d)
+int mult(int a, int b)
 {
-	return (c * d);
+	return (a * b);
 }
-int divi(int c, int d)
+int divi(int a, int b)
 {
-	return (c / d);
+	return (a / b);
 }

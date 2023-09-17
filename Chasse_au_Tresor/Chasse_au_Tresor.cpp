@@ -4,18 +4,25 @@
 #define HEIGHT 4
 
 int plateau[WIDTH * HEIGHT] = {
-		0, 0, 0, 0,
+        0, 0, 0, 0,
         0, 0, 0, 0,
         0, 0, 0, 0,
         0, 0, 0, 0,
 };
 
-//int coffre[WIDTH * HEIGHT] = {
-//        0, 0, 0, 0,
-//        0, 0, 1, 0,
-//        0, 0, 0, 0,
-//        0, 0, 0, 0,
-//};
+int coffre[WIDTH * HEIGHT] = {
+        0, 0, 0, 0,
+        0, 0, 1, 0,
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+};
+
+int affichage_plateau[WIDTH * HEIGHT] = {
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+        0, 0, 0, 0,
+};
 
 void draw_game()
 {
@@ -23,74 +30,63 @@ void draw_game()
     {
         for (int column = 0; column < WIDTH; column++)
         {
-            int case_state = plateau[row * WIDTH + column];
-
+            int case_state = affichage_plateau[row * WIDTH + column];
             if (case_state == 0)
             {
                 std::cout << '-';
             }
-            else
+            else if (case_state == 1)
             {
                 std::cout << 'x';
+            }
+            else
+            {
+                std::cout << 'o';
             }
         }
         std::cout << '\n';
     }
 }
 
-//void Recherche()
-//{
-//    for (int row = 0; row < HEIGHT; row++)
-//    {
-//        for (int column = 0; column < WIDTH; column++)
-//        {
-//            int case_state = coffre[row * WIDTH + column];
-//
-//            if (case_state == 0)
-//            {
-//                std::cout << '-';
-//            }
-//            else
-//            {
-//                std::cout << 'o';
-//            }
-//        }
-//        std::cout << '\n';
-//
-//    }
-//}
-
 int ligne()
 {
     //ligne x
-    int x;
+    unsigned int x;
 
-    //colone y
-    int y;
-    
+    //colonne y
+    unsigned int y;
+
     std::cout << "ligne 1-4" << std::endl;
     std::cin >> x;
-	
-    std::cout << "colone 1-4" << std::endl;
+
+    std::cout << "colonne 1-4" << std::endl;
     std::cin >> y;
 
-    int result = (x-1) * WIDTH + (y-1);
-
-    plateau[result] = 1;
+    int result = (x - 1) * WIDTH + (y - 1);
 
     return result;
 }
 
+bool compar(int result)
+{
+    if (plateau[result] != coffre[result])
+    {
+        affichage_plateau[result] = 2;
+        return true;
+    }
+	affichage_plateau[result] = 1;
+    return false;
+
+}
+
 int main()
 {
-    bool(treasurefound) = false;
-
+    bool(treasurefound);
+    draw_game();
     do
     {
-
+        treasurefound = compar(ligne());
         draw_game();
-        ligne();
-
     }
 	while (treasurefound == false);
 
