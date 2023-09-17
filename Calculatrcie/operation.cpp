@@ -18,23 +18,15 @@ float divi(float c, float d)
 {
 	return (c / d);
 }
-float carre(float c)
+float carrec(float c)
 {
 	return (sqrtf(c));
 }
-int add(int a, int b)
+float carred(float d)
 {
-	return (a + b);
+	return (sqrtf(d));
 }
-int sub(int a, int b)
+int pui(int c, int d)
 {
-	return (a - b);
-}
-int mult(int a, int b)
-{
-	return (a * b);
-}
-int divi(int a, int b)
-{
-	return (a / b);
+	return (pow(c, d));
 }
