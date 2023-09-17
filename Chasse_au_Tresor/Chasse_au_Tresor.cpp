@@ -48,6 +48,7 @@ void draw_game()
     }
 }
 
+
 int ligne()
 {
     //ligne x
@@ -55,16 +56,16 @@ int ligne()
 
     //colonne y
     unsigned int y;
-
+       
     std::cout << "ligne 1-4" << std::endl;
     std::cin >> x;
-
+    if(x > 4) x = 4;
+    
     std::cout << "colonne 1-4" << std::endl;
     std::cin >> y;
+    if (y > 4) y = 4;
 
-    int result = (x - 1) * WIDTH + (y - 1);
-
-    return result;
+    return (x - 1) * WIDTH + (y - 1);
 }
 
 bool compar(int result)

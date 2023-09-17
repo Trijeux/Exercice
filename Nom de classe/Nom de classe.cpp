@@ -2,7 +2,7 @@
 
 int main()
 {
-	const char* names[13] = 
+	const char* names[12] = 
 	{
 		"Elias",
 		"Seb",
@@ -17,7 +17,6 @@ int main()
 		"Antoine",
 		"Thomas",
 	};
-
 
 	for (int a = 0; a < 12; a++)
 	{
