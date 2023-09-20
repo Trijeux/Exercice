@@ -3,6 +3,7 @@
 #define WIDTH 4
 #define HEIGHT 4
 
+//Tableau
 int plateau[WIDTH * HEIGHT] = {
         0, 0, 0, 0,
         0, 0, 0, 0,
@@ -24,6 +25,7 @@ int affichage_plateau[WIDTH * HEIGHT] = {
         0, 0, 0, 0,
 };
 
+//Dessin
 void draw_game()
 {
     for (int row = 0; row < HEIGHT; row++)
@@ -49,6 +51,7 @@ void draw_game()
 }
 
 
+//Cordonner
 int ligne()
 {
     //ligne x
@@ -68,6 +71,7 @@ int ligne()
     return (x - 1) * WIDTH + (y - 1);
 }
 
+//Condition de Victoire
 bool compar(int result)
 {
     if (plateau[result] != coffre[result])
@@ -80,6 +84,7 @@ bool compar(int result)
 
 }
 
+//Jeux
 int main()
 {
     bool(treasurefound);
