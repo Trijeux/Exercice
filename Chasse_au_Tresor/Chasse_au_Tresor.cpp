@@ -1,4 +1,5 @@
 #include <iostream>
+#include <random>
 
 #define WIDTH 4
 #define HEIGHT 4
@@ -50,6 +51,11 @@ void draw_game()
     }
 }
 
+////random
+//void random()
+//{
+//   std::default_random_engine //nom variable
+//}
 
 //Cordonner
 int ligne()
