@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{434aa55e-5fb1-4378-95af-e026dbc4273f}</ProjectGuid>
-    <RootNamespace>Statusaléatoire</RootNamespace>
+    <ProjectGuid>{09f57626-81c9-47ce-8d1b-5138a48faea2}</ProjectGuid>
+    <RootNamespace>Recherchedespace</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,10 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Status aléatoire.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Status.h" />
+    <ClCompile Include="Recherche_d%27espace.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

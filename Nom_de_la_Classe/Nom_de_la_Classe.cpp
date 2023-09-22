@@ -2,7 +2,7 @@
 
 int main()
 {
-	const char* names[12] = 
+	const char* names[12] =
 	{
 		"Elias",
 		"Seb",

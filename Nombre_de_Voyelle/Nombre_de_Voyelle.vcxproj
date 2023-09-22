@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d9127f6a-5251-422b-9633-43c994721232}</ProjectGuid>
-    <RootNamespace>Nomdeclasse</RootNamespace>
+    <ProjectGuid>{4603d9fa-b80a-420b-88d0-a3d223170b32}</ProjectGuid>
+    <RootNamespace>NombredeVoyelle</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Nom de classe.cpp" />
+    <ClCompile Include="Nombre_de_Voyelle.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
