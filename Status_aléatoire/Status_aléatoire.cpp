@@ -5,5 +5,8 @@ int main()
 
     Status myStatus;
     myStatus = Status::None;
-    DisplayStatus(myStatus);
+	DisplayStatus(myStatus);
+
+    std::cin.ignore();
+
 }

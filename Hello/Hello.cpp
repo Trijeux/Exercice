@@ -28,5 +28,7 @@ int main()
 
 	std::cout << "Bienvenu dans mon programe " << surname << " tu as " << age << " donc tu es " << status << " mais c'est pas pour etre mechant." << std::endl;
 
+	std::cin.ignore();
+
 }
 

@@ -67,5 +67,7 @@ int main()
 		std::cout << "Bug systeme extinction de l'humanite" "\n";
 	}
 
+	std::cin.ignore();
+
 	return EXIT_SUCCESS;
 }

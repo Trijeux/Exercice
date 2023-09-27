@@ -16,5 +16,7 @@ int main()
 	}
 	std::cout << "Il y a " << nbvowels << " voyelle dans ton nom" << std::endl;
 
+	std::cin.ignore();
+
 	return 0;
 }

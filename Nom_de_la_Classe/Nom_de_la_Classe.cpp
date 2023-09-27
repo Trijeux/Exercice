@@ -1,8 +1,11 @@
 #include <iostream>
+#include <thread>
+
+#define eleve 12
 
 int main()
 {
-	const char* names[12] =
+	const char* names[eleve] =
 	{
 		"Elias",
 		"Seb",
@@ -18,10 +21,22 @@ int main()
 		"Thomas",
 	};
 
-	for (int a = 0; a < 12; a++)
+	for (int i = 0; i < 12; ++i)
+	{
+		srand(time(0));
+		int idxRandom = rand() % 10;
+		
+		std::cout << "Name: " << names[idxRandom] << std::endl;
+		std::this_thread::sleep_for(std::chrono::seconds(1));
+	}
+
+
+	/*for (int a = 0; a < 12; a++)
 	{
 		std::cout << "Name: " << names[a] << std::endl;
-	}
+	}*/
+
+	std::cin.ignore();
 
 	return EXIT_SUCCESS;
 }
