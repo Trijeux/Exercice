@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{848e8ae5-8961-41b7-8f0f-599f808dabc5}</ProjectGuid>
-    <RootNamespace>Statusaléatoire</RootNamespace>
+    <ProjectGuid>{83f3b35c-9b48-4ad7-898a-232d70ee6751}</ProjectGuid>
+    <RootNamespace>StatusAleatoire</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Status_aléatoire.cpp" />
+    <ClCompile Include="StatusAleatoire.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Status.h" />

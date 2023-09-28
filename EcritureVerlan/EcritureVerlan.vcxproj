@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{459b903f-f325-4d7c-b914-1a106505f826}</ProjectGuid>
-    <RootNamespace>Calculatrcie</RootNamespace>
+    <ProjectGuid>{45494061-2845-4494-9aa3-1c4a57c8c8f3}</ProjectGuid>
+    <RootNamespace>EcritureVerlan</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,11 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Calculatrcie.cpp" />
-    <ClCompile Include="Operation.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Operation.h" />
+    <ClCompile Include="EcritureVerlan.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

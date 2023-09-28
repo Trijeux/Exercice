@@ -1,7 +1,7 @@
-#include "operation.h"
+#include "Operation.h"
 #include <math.h>
 
- //addition
+//addition
 float add(float c, float d)
 {
 	return (c + d);

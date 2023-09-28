@@ -1,6 +1,6 @@
 // Libraries
 #include <iostream>
-#include "operation.h"
+#include "Operation.h"
 char operation;
 
 

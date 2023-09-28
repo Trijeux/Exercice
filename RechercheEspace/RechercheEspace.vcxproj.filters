@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Recherche_d%27espace.cpp">
+    <ClCompile Include="RechercheEspace.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
