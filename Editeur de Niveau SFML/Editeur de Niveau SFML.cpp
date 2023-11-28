@@ -1,6 +1,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <stdio.h>
+#include <windows.h>
 
 #define TILEMAP_WIDTH 20
 #define TILEMAP_HEIGHT 20
@@ -20,6 +21,17 @@ void load()
 	fread(tilemap, sizeof(tilemap), 1, f);
 	fclose(f);
 }
+
+//sf::Vector2f gravity()
+//{
+//	/*constexpr float graviter = 1;
+//	static sf::Vector2f acceleration{ 0, 0 };
+//	static sf::Vector2f speed{ 0, 0 };
+//
+//	acceleration.y = graviter;
+//	speed += acceleration;
+//	return speed;*/
+//}
 
 int main()
 {
@@ -108,8 +120,10 @@ int main()
 			{
 				window.close();
 			}
+
 			if (event.type == sf::Event::KeyPressed) {
 				sf::Vector2i prev_player_coords = tile_player_Coord;
+
 				if (event.key.code == sf::Keyboard::A)
 				{
 					tile_player_Coord.x -= 1;
@@ -119,12 +133,10 @@ int main()
 				{
 					tile_player_Coord.x += 1;
 				}
-
-				if (event.key.code == sf::Keyboard::S)
+				if (sf::Keyboard::S)
 				{
 					tile_player_Coord.y += 1;
 				}
-
 				if (event.key.code == sf::Keyboard::W)
 				{
 					tile_player_Coord.y -= 1;
@@ -159,6 +171,7 @@ int main()
 				window.draw(tile_shape);
 			}*/
 
+			tile_player_Coord.y += 1;
 
 			tile_cursor.setPosition(50 * mouse_tile_Coord.x, 50 * mouse_tile_Coord.y);
 			window.draw(tile_cursor);
@@ -181,8 +194,6 @@ int main()
 			window.draw(tile_player);
 
 			window.display();
-
-
 		}
 	}
 	return 0;
